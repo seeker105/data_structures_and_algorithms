@@ -4,12 +4,12 @@ describe('ListNode', function() {
     expect(node.data).to.eq('pizza');
   });
 
-  it.skip('should have a default empty nextNode', function() {
+  it('should have a default empty nextNode', function() {
     var node = new ListNode('pizza');
     expect(node.nextNode).to.eq(null);
   });
 
-  it.skip('should allow setting a nextNode', function() {
+  it('should allow setting a nextNode', function() {
     var n1 = new ListNode('pizza');
     var n2 = new ListNode('cats');
     n1.nextNode = n2;
@@ -17,7 +17,7 @@ describe('ListNode', function() {
     expect(n1.nextNode instanceof ListNode).to.be.true;
   });
 
-  it.skip('should allow a next node argument on creation', function(){
+  it('should allow a next node argument on creation', function(){
     var node = new ListNode('pizza', new ListNode('cats'));
     expect(node.nextNode.data).to.eq('cats');
     expect(node.nextNode instanceof ListNode).to.be.true;
@@ -31,29 +31,29 @@ describe('LinkedList', function() {
     list = new List();
   });
 
-  it.skip('should start with zero elements', function() {
+  it('should start with zero elements', function() {
     expect(list._length).to.eq(0);
   });
 
-  it.skip('should set its default head to null', function(){
+  it('should set its default head to null', function(){
     expect(list.head).to.eq(null);
   });
 
   describe('.push', function(){
     context('with a single element', function(){
-      it.skip('should allow push of a single element to a list', function(){
+      it('should allow push of a single element to a list', function(){
         list.push('pizza');
         expect(list.head.data).to.eq('pizza');
       });
 
-      it.skip('should increment the _length of the list', function(){
+      it('should increment the _length of the list', function(){
         list.push('pizza');
         expect(list._length).to.eq(1);
       });
     });
 
     context('with multiple elements', function(){
-      it.skip('should increment the length count', function(){
+      it('should increment the length count', function(){
         list.push('pizza');
         list.push('stromboli');
         list.push('mushroom');
