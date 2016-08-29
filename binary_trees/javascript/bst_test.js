@@ -80,7 +80,6 @@ describe('BST', function() {
     });
 
     context('when there are multiple nodes', function(){
-      debugger;
       it('continues adding smaller data to the left down the tree', function(){
         tree.push(5);
         tree.push(4);
@@ -90,7 +89,7 @@ describe('BST', function() {
         expect(tree.rootNode.left.left.data).to.eq(3, 'last node to the left not set correctly');
       });
 
-      xit('continues adding larger data to the left down the tree', function(){
+      it('continues adding larger data to the left down the tree', function(){
         tree.push(5);
         tree.push(6);
         tree.push(7);
@@ -99,7 +98,7 @@ describe('BST', function() {
         expect(tree.rootNode.right.right.data).to.eq(7, 'last node to the right not set correctly');
       });
 
-      xit('creates a tree structure with multiple nodes', function(){
+      it('creates a tree structure with multiple nodes', function(){
 //                   Node(1)
 //                   /
 //               Node(2)
